@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IoT Air Quality Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>IoT Air Quality & Environmental Monitoring Dashboard</h1>
+    <p>SGP40 Sensor Integration Overview</p>
+  </header>
+
+  <main>
+    <!-- Project Overview -->
+    <section class="overview">
+      <h2>Project Overview</h2>
+      <p>
+        This project presents an advanced IoT-based environmental monitoring system built around the ESP32 microcontroller. 
+        The device continuously measures a wide range of atmospheric and air-quality parameters, providing real-time data for research and practical applications.
+      </p>
+      <p>
+        My primary responsibility was developing the <strong>firmware for the SGP40 sensor</strong>, which reads raw gas sensor data and generates a meaningful <strong>TVOC (Total Volatile Organic Compounds) index</strong>. This index estimates indoor air quality based on VOC concentration.
+      </p>
+      <p>
+        Beyond TVOC readings, the system collects temperature, humidity, pressure, altitude, CO₂ concentration, particulate matter across multiple sizes, particle counts, and typical particle size. All data are structured in JSON and sent to a cloud API for seamless dashboard integration.
+      </p>
+    </section>
+
+    <!-- System Overview -->
+    <section class="overview">
+      <h2>System Overview</h2>
+      <p>The ESP32 collects the following measurements during each cycle:</p>
+      <ul>
+        <li><strong>Temperature (°C)</strong> – Ambient air temperature.</li>
+        <li><strong>Humidity (%)</strong> – Relative moisture content.</li>
+        <li><strong>Pressure (hPa)</strong> – Atmospheric pressure levels.</li>
+        <li><strong>Altitude (m)</strong> – Calculated using pressure variations.</li>
+        <li><strong>CO₂ (ppm)</strong> – Carbon dioxide concentration.</li>
+        <li><strong>Particulate Matter</strong> (PM1.0, PM2.5, PM4.0, PM10) – Number of particles per cm³ per size class..</li>
+        <li><strong>Particle Count</strong> (NC0.5, NC1.0, NC2.5, NC4.0, NC10) – Mass concentration of airborne particles across size ranges..</li>
+        <li><strong>Typical Particle Size</strong> – Average detected particle diameter.</li>
+        <li><strong>Raw VOC Signal (SGP40)</strong> – Gas sensor output.</li>
+        <li><strong>TVOC Index</strong> – Total volatile organic compound index.</li>
+        <li><strong>Timestamp</strong> – Exact measurement time.</li>
+        <li><strong>Device ID</strong> – ESP32 identifier.</li>
+      </ul>
+      <p>
+        Combined, these readings create a complete snapshot of environmental changes and air-quality conditions for each recorded moment.
+      </p>
+    </section>
+
+    <!-- Key Features -->
+    <section class="overview">
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>SGP40 TVOC Processing:</strong> Converts raw readings into reliable TVOC index.</li>
+        <li><strong>Comprehensive Dataset:</strong> Collects 20+ parameters per measurement cycle.</li>
+        <li><strong>Reliable Connectivity:</strong> Auto Wi-Fi reconnection and cloud JSON uploads.</li>
+        <li><strong>Dashboard Ready:</strong> Data structured for instant visualization.</li>
+        <li><strong>Extensible System:</strong> Supports adding sensors and IoT integration.</li>
+      </ul>
+    </section>
+
+    <!-- TVOC Chart -->
+    <section class="overview">
+      <h2>TVOC Index Trend</h2>
+      <canvas id="tvocChart"></canvas>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
