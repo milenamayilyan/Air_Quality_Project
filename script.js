@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Full sample data
   const data = [
+  {"temperature":24.1,"pressure":904.12,"humidity":30.33,"altitude":950.95,"co2ppm":833.0,"tvoc_index":0,"timestamp":"2025-12-05T12:05:20.861899"},
   {"temperature":24.03,"pressure":904.09,"humidity":29.74,"altitude":951.22,"co2ppm":853,"tvoc_index":1,"timestamp":"2025-12-05T12:05:27.450820"},
   {"temperature":24.03,"pressure":904.13,"humidity":30.78,"altitude":950.89,"co2ppm":857,"tvoc_index":1,"timestamp":"2025-12-05T12:05:34.096612"},
   {"temperature":24.01,"pressure":904.13,"humidity":29.84,"altitude":950.91,"co2ppm":894,"tvoc_index":1,"timestamp":"2025-12-05T12:05:40.923010"},
@@ -20,7 +21,26 @@ document.addEventListener("DOMContentLoaded", () => {
   {"temperature":25.61,"pressure":904.06,"humidity":35.43,"altitude":951.52,"co2ppm":1437,"tvoc_index":99,"timestamp":"2025-12-05T12:07:18.608442"},
   {"temperature":25.68,"pressure":904.1,"humidity":33.83,"altitude":951.17,"co2ppm":1290,"tvoc_index":107,"timestamp":"2025-12-05T12:07:25.777367"},
   {"temperature":25.93,"pressure":904.23,"humidity":31.73,"altitude":950.02,"co2ppm":1197,"tvoc_index":125,"timestamp":"2025-12-05T12:07:32.554436"},
-  {"temperature":26.08,"pressure":904.22,"humidity":34.37,"altitude":950.11,"co2ppm":1219,"tvoc_index":143,"timestamp":"2025-12-05T12:07:40.293886"}
+  {"temperature":26.08,"pressure":904.22,"humidity":34.37,"altitude":950.11,"co2ppm":1219,"tvoc_index":143,"timestamp":"2025-12-05T12:07:40.293886"},
+  {"temperature":25.86,"pressure":904.18,"humidity":29.29,"altitude":950.4,"co2ppm":1164.0,"tvoc_index":136,"timestamp":"2025-12-05T12:07:47.192680"},
+  {"temperature":25.75,"pressure":904.18,"humidity":33.97,"altitude":950.48,"co2ppm":1086.0,"tvoc_index":154,"timestamp":"2025-12-05T12:07:54.159763"},
+  {"temperature":25.61,"pressure":904.14,"humidity":28.97,"altitude":950.77,"co2ppm":1088.0,"tvoc_index":169,"timestamp":"2025-12-05T12:08:01.035054"},
+  {"temperature":25.49,"pressure":904.15,"humidity":28.36,"altitude":950.74,"co2ppm":1056.0,"tvoc_index":161,"timestamp":"2025-12-05T12:08:07.929319"},
+  {"temperature":25.36,"pressure":904.14,"humidity":28.2,"altitude":950.83,"co2ppm":983.0,"tvoc_index":154,"timestamp":"2025-12-05T12:08:14.702348"},
+  {"temperature":25.24,"pressure":904.14,"humidity":28.2,"altitude":950.83,"co2ppm":908.0,"tvoc_index":146,"timestamp":"2025-12-05T12:08:23.969224"},
+  {"temperature":26.05,"pressure":904.25,"humidity":53.45,"altitude":949.84,"co2ppm":805.0,"tvoc_index":163,"timestamp":"2025-12-05T12:08:31.904441"},
+  {"temperature":25.87,"pressure":904.18,"humidity":30.35,"altitude":950.4,"co2ppm":992.0,"tvoc_index":161,"timestamp":"2025-12-05T12:08:39.756403"},
+  {"temperature":26.66,"pressure":904.25,"humidity":56.74,"altitude":949.77,"co2ppm":1066.0,"tvoc_index":177,"timestamp":"2025-12-05T12:08:47.378848"},
+  {"temperature":26.82,"pressure":904.26,"humidity":45.6,"altitude":949.68,"co2ppm":1675.0,"tvoc_index":193,"timestamp":"2025-12-05T12:08:54.133098"},
+  {"temperature":26.9,"pressure":904.05,"humidity":50.66,"altitude":951.65,"co2ppm":1442.0,"tvoc_index":207,"timestamp":"2025-12-05T12:09:00.686267"},
+  {"temperature":26.76,"pressure":904.21,"humidity":33.69,"altitude":950.13,"co2ppm":1452.0,"tvoc_index":210,"timestamp":"2025-12-05T12:09:07.447076"},
+  {"temperature":26.67,"pressure":904.13,"humidity":48.78,"altitude":950.93,"co2ppm":1358.0,"tvoc_index":222,"timestamp":"2025-12-05T12:09:13.843990"},
+  {"temperature":26.46,"pressure":904.26,"humidity":32.66,"altitude":949.66,"co2ppm":1350.0,"tvoc_index":212,"timestamp":"2025-12-05T12:09:20.753803"},
+  {"temperature":26.78,"pressure":903.93,"humidity":49.9,"altitude":952.69,"co2ppm":1138.0,"tvoc_index":226,"timestamp":"2025-12-05T12:09:27.514437"},
+  {"temperature":26.73,"pressure":904.26,"humidity":31.4,"altitude":949.72,"co2ppm":1675.0,"tvoc_index":221,"timestamp":"2025-12-05T12:09:34.390753"},
+  {"temperature":26.43,"pressure":904.29,"humidity":28.93,"altitude":949.39,"co2ppm":1442.0,"tvoc_index":210,"timestamp":"2025-12-05T12:09:41.131988"},
+  {"temperature":26.22,"pressure":904.24,"humidity":28.38,"altitude":949.86,"co2ppm":1099.0,"tvoc_index":200,"timestamp":"2025-12-05T12:09:49.455004"},
+  {"temperature":26.0,"pressure":904.25,"humidity":28.09,"altitude":949.81,"co2ppm":1004.0,"tvoc_index":191,"timestamp":"2025-12-05T12:09:57.133993"}
   ];
 
   const labels = data.map(d => d.timestamp.slice(11,19));
