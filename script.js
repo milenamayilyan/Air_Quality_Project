@@ -71,7 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
   {"temperature":25.68,"pressure":903.97,"humidity":25.42,"altitude":950.67,"co2ppm":540.0,"tvoc_index":12,"timestamp":"2025-12-05T12:13:25.924891"},
   {"temperature":25.67,"pressure":903.96,"humidity":25.41,"altitude":950.68,"co2ppm":520.0,"tvoc_index":6,"timestamp":"2025-12-05T12:13:33.401207"},
   {"temperature":25.67,"pressure":903.96,"humidity":25.40,"altitude":950.69,"co2ppm":500.0,"tvoc_index":2,"timestamp":"2025-12-05T12:13:40.876318"},
-  {"temperature":25.67,"pressure":903.96,"humidity":25.40,"altitude":950.70,"co2ppm":480.0,"tvoc_index":0,"timestamp":"2025-12-05T12:13:48.351992"}
+  {"temperature":25.67,"pressure":903.96,"humidity":25.40,"altitude":950.70,"co2ppm":480.0,"tvoc_index":0,"timestamp":"2025-12-05T12:13:48.351992"},
+  {"temperature":25.67,"pressure":903.96,"humidity":25.40,"altitude":950.70,"co2ppm":480.0,"tvoc_index":0,"timestamp":"2025-12-05T12:13:35.350092"}
 ];
 
   const labels = data.map(d => d.timestamp.slice(11,19));
