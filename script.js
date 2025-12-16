@@ -53,7 +53,25 @@ document.addEventListener("DOMContentLoaded", () => {
   {"temperature":25.83,"pressure":904.12,"humidity":26.55,"altitude":950.24,"co2ppm":865.0,"tvoc_index":171,"timestamp":"2025-12-05T12:11:11.462778"},
   {"temperature":25.82,"pressure":904.11,"humidity":26.40,"altitude":950.27,"co2ppm":850.0,"tvoc_index":169,"timestamp":"2025-12-05T12:11:18.913420"},
   {"temperature":25.81,"pressure":904.10,"humidity":26.28,"altitude":950.30,"co2ppm":840.0,"tvoc_index":168,"timestamp":"2025-12-05T12:11:26.388912"},
-  {"temperature":25.80,"pressure":904.09,"humidity":26.15,"altitude":950.33,"co2ppm":830.0,"tvoc_index":166,"timestamp":"2025-12-05T12:11:33.844517"}
+  {"temperature":25.80,"pressure":904.09,"humidity":26.15,"altitude":950.33,"co2ppm":830.0,"tvoc_index":166,"timestamp":"2025-12-05T12:11:33.844517"},
+  {"temperature":25.79,"pressure":904.08,"humidity":26.05,"altitude":950.36,"co2ppm":820.0,"tvoc_index":160,"timestamp":"2025-12-05T12:11:41.312994"},
+  {"temperature":25.78,"pressure":904.07,"humidity":25.95,"altitude":950.39,"co2ppm":800.0,"tvoc_index":148,"timestamp":"2025-12-05T12:11:48.774318"},
+  {"temperature":25.77,"pressure":904.06,"humidity":25.85,"altitude":950.42,"co2ppm":780.0,"tvoc_index":136,"timestamp":"2025-12-05T12:11:56.251903"},
+  {"temperature":25.76,"pressure":904.05,"humidity":25.78,"altitude":950.45,"co2ppm":760.0,"tvoc_index":125,"timestamp":"2025-12-05T12:12:03.721540"},
+  {"temperature":25.75,"pressure":904.04,"humidity":25.70,"altitude":950.48,"co2ppm":740.0,"tvoc_index":114,"timestamp":"2025-12-05T12:12:11.198204"},
+  {"temperature":25.74,"pressure":904.03,"humidity":25.65,"altitude":950.50,"co2ppm":720.0,"tvoc_index":103,"timestamp":"2025-12-05T12:12:18.663711"},
+  {"temperature":25.73,"pressure":904.02,"humidity":25.60,"altitude":950.52,"co2ppm":700.0,"tvoc_index":92,"timestamp":"2025-12-05T12:12:26.137492"},
+  {"temperature":25.72,"pressure":904.01,"humidity":25.56,"altitude":950.54,"co2ppm":680.0,"tvoc_index":81,"timestamp":"2025-12-05T12:12:33.610381"},
+  {"temperature":25.71,"pressure":904.00,"humidity":25.53,"altitude":950.56,"co2ppm":660.0,"tvoc_index":70,"timestamp":"2025-12-05T12:12:41.086903"},
+  {"temperature":25.70,"pressure":903.99,"humidity":25.50,"altitude":950.58,"co2ppm":640.0,"tvoc_index":60,"timestamp":"2025-12-05T12:12:48.554228"},
+  {"temperature":25.70,"pressure":903.99,"humidity":25.48,"altitude":950.60,"co2ppm":620.0,"tvoc_index":50,"timestamp":"2025-12-05T12:12:56.030417"},
+  {"temperature":25.69,"pressure":903.98,"humidity":25.46,"altitude":950.62,"co2ppm":600.0,"tvoc_index":40,"timestamp":"2025-12-05T12:13:03.505992"},
+  {"temperature":25.69,"pressure":903.98,"humidity":25.44,"altitude":950.64,"co2ppm":580.0,"tvoc_index":30,"timestamp":"2025-12-05T12:13:10.977644"},
+  {"temperature":25.68,"pressure":903.97,"humidity":25.43,"altitude":950.66,"co2ppm":560.0,"tvoc_index":20,"timestamp":"2025-12-05T12:13:18.452306"},
+  {"temperature":25.68,"pressure":903.97,"humidity":25.42,"altitude":950.67,"co2ppm":540.0,"tvoc_index":12,"timestamp":"2025-12-05T12:13:25.924891"},
+  {"temperature":25.67,"pressure":903.96,"humidity":25.41,"altitude":950.68,"co2ppm":520.0,"tvoc_index":6,"timestamp":"2025-12-05T12:13:33.401207"},
+  {"temperature":25.67,"pressure":903.96,"humidity":25.40,"altitude":950.69,"co2ppm":500.0,"tvoc_index":2,"timestamp":"2025-12-05T12:13:40.876318"},
+  {"temperature":25.67,"pressure":903.96,"humidity":25.40,"altitude":950.70,"co2ppm":480.0,"tvoc_index":0,"timestamp":"2025-12-05T12:13:48.351992"}
 ];
 
   const labels = data.map(d => d.timestamp.slice(11,19));
