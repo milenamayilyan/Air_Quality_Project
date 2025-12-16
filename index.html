@@ -4,76 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IoT Air Quality Dashboard</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <h1>IoT Air Quality & Environmental Monitoring Dashboard</h1>
     <p>SGP40 Sensor Integration Overview</p>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main>
-
-    <!-- PROJECT OVERVIEW -->
+    <!-- Project Overview -->
     <section class="overview">
       <h2>Project Overview</h2>
       <p>
-        This project presents an advanced IoT-based environmental monitoring system built around the ESP32 microcontroller.
-        The device continuously measures atmospheric and air-quality parameters and sends structured data to the cloud.
+        This project presents an advanced IoT-based environmental monitoring system built around the ESP32 microcontroller. 
+        The device continuously measures a wide range of atmospheric and air-quality parameters, providing real-time data for research and practical applications.
       </p>
       <p>
-        My primary responsibility was developing the <strong>firmware for the SGP40 sensor</strong>,
-        converting raw VOC readings into a meaningful <strong>TVOC index</strong>.
+        My primary responsibility was developing the <strong>firmware for the SGP40 sensor</strong>, which reads raw gas sensor data and generates a meaningful <strong>TVOC (Total Volatile Organic Compounds) index</strong>. This index estimates indoor air quality based on VOC concentration.
       </p>
     </section>
 
-    <!-- SYSTEM OVERVIEW -->
+    <!-- System Overview -->
     <section class="overview">
       <h2>System Overview</h2>
       <ul>
-        <li>Temperature, Humidity, Pressure, Altitude</li>
-        <li>CO₂ concentration</li>
-        <li>Particulate Matter & Particle Count</li>
-        <li><strong>SGP40 Raw VOC Signal</strong></li>
-        <li><strong>TVOC Index</strong></li>
-        <li>Timestamp & Device ID</li>
+        <li><strong>Temperature (°C)</strong> – Ambient air temperature.</li>
+        <li><strong>Humidity (%)</strong> – Relative moisture content.</li>
+        <li><strong>Pressure (hPa)</strong> – Atmospheric pressure levels.</li>
+        <li><strong>Altitude (m)</strong> – Calculated using pressure variations.</li>
+        <li><strong>CO₂ (ppm)</strong> – Carbon dioxide concentration.</li>
+        <li><strong>Particulate Matter</strong> (PM1.0, PM2.5, PM4.0, PM10) – Number of particles per cm³ per size class.</li>
+        <li><strong>Particle Count</strong> (NC0.5, NC1.0, NC2.5, NC4.0, NC10) – Mass concentration of airborne particles.</li>
+        <li><strong>Typical Particle Size</strong> – Average detected particle diameter.</li>
+        <li><strong>Raw VOC Signal (SGP40)</strong> – Gas sensor output.</li>
+        <li><strong>TVOC Index</strong> – Total volatile organic compound index.</li>
+        <li><strong>Timestamp</strong> – Exact measurement time.</li>
       </ul>
     </section>
 
-    <!-- KEY FEATURES -->
-    <section class="overview">
-      <h2>Key Features</h2>
-      <ul>
-        <li>SGP40 raw → TVOC processing</li>
-        <li>JSON-based cloud uploads</li>
-        <li>Dashboard-ready visualization</li>
-        <li>Extensible IoT architecture</li>
-      </ul>
-    </section>
-
-    <!-- TVOC CHART -->
+    <!-- TVOC Chart -->
     <section class="overview">
       <h2>TVOC Index Trend</h2>
       <canvas id="tvocChart"></canvas>
     </section>
 
-    <!-- SGP40 RAW CHART -->
+    <!-- SGP40 Raw Signal Chart -->
     <section class="overview">
       <h2>SGP40 Raw Signal Trend</h2>
       <canvas id="sgp40Chart"></canvas>
     </section>
-
   </main>
 
-  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
