@@ -80,50 +80,79 @@ document.addEventListener("DOMContentLoaded", () => {
   // -----------------------------
   // DATA PREP
   // -----------------------------
-  const labels = data.map(d => d.timestamp.slice(11, 19));
+  
+  const labels = data.map(d => d.timestamp.slice(11,19));
   const tvocData = data.map(d => d.tvoc_index);
   const sgp40Data = data.map(d => d.sgp40_raw);
 
-  // -----------------------------
-  // TVOC CHART
-  // -----------------------------
-  const ctx = document.getElementById("tvocChart").getContext("2d");
+  // --- TVOC Chart ---
+  const ctx = document.getElementById('tvocChart').getContext('2d');
+  const gradient = ctx.createLinearGradient(0,0,0,400);
+  gradient.addColorStop(0, '#1a3c5a88');
+  gradient.addColorStop(1, '#1a3c5a11');
+
   new Chart(ctx, {
-    type: "line",
+    type: 'line',
     data: {
       labels,
       datasets: [{
-        label: "TVOC Index",
+        label: 'TVOC Index',
         data: tvocData,
-        borderColor: "#1a3c5a",
-        backgroundColor: "rgba(26,60,90,0.15)",
+        borderColor: '#1a3c5a',
+        backgroundColor: gradient,
         fill: true,
         tension: 0.4,
-        pointRadius: 4
+        pointRadius: 5,
+        pointHoverRadius: 7
       }]
     },
-    options: { responsive: true }
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: true, position: 'top', labels: { color: '#1a3c5a' } },
+        tooltip: { backgroundColor:'#1a3c5a', titleColor:'#fff', bodyColor:'#fff' }
+      },
+      scales: {
+        x: { title: { display:true, text:'Time (HH:MM:SS)', color:'#1a3c5a' }, ticks:{ color:'#1a3c5a' } },
+        y: { title: { display:true, text:'TVOC Index', color:'#1a3c5a' }, ticks:{ color:'#1a3c5a' } }
+      }
+    }
   });
 
-  // -----------------------------
-  // SGP40 RAW CHART
-  // -----------------------------
-  const ctx2 = document.getElementById("sgp40Chart").getContext("2d");
+  // --- SGP40 Chart ---
+  const ctx2 = document.getElementById('sgp40Chart').getContext('2d');
+  const gradient2 = ctx2.createLinearGradient(0,0,0,400);
+  gradient2.addColorStop(0, '#7a1f1f88');
+  gradient2.addColorStop(1, '#7a1f1f11');
+
   new Chart(ctx2, {
-    type: "line",
+    type: 'line',
     data: {
       labels,
       datasets: [{
-        label: "SGP40 Raw Signal",
+        label: 'SGP40 Raw Signal',
         data: sgp40Data,
-        borderColor: "#7a1f1f",
-        backgroundColor: "rgba(122,31,31,0.15)",
+        borderColor: '#7a1f1f',
+        backgroundColor: gradient2,
         fill: true,
         tension: 0.4,
-        pointRadius: 4
+        pointRadius: 5,
+        pointHoverRadius: 7
       }]
     },
-    options: { responsive: true }
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: true, position: 'top', labels: { color: '#7a1f1f' } },
+        tooltip: { backgroundColor:'#7a1f1f', titleColor:'#fff', bodyColor:'#fff' }
+      },
+      scales: {
+        x: { title: { display:true, text:'Time (HH:MM:SS)', color:'#7a1f1f' }, ticks:{ color:'#7a1f1f' } },
+        y: { title: { display:true, text:'SGP40 Raw Value', color:'#7a1f1f' }, ticks:{ color:'#7a1f1f' } }
+      }
+    }
   });
 
 });
